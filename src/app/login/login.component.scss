@@ -2,7 +2,10 @@
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 90vh;
+min-height: 100vh;
+background: url("https://projexc.files.wordpress.com/2013/07/pm-tool-logo-clouds.jpg");
+background-color: currentColor;
+background-blend-mode: overlay;
 }
 label{
     font-weight: bold;
@@ -10,14 +13,16 @@ label{
 }
 
 .flexbox{
-width: 25%;
+width: 30%;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 background-color: whitesmoke;
-border: 6px ridge darkcyan;
-border-radius: 15px;
+//border: 6px ridge darkcyan;
+border-radius: 20px;
 opacity: 0.88;
+background: url("../resources/img/loginbg.png");
+background-size: contain;
 }
 .flexitem{
 width: 90%;
@@ -34,6 +39,7 @@ height: 20px;
 .flexitembtn{
 width: 30%;
 margin-bottom: 5px;
+border: 2px white solid;
 }
 .flex-itemHeading{
 text-align: center;
@@ -43,7 +49,8 @@ letter-spacing: 3px;
 margin-top: 15px;
 }
 .link-access-div{
-color: darkred;
+color: white;
+text-shadow: 2px 2px crimson;
 margin-right: auto;
 width: 100%;
 }

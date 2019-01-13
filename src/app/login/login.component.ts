@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -52,7 +53,7 @@ export class LoginComponent implements OnInit {
         this.loginMsg = 'trying....';
 
           let req = new XMLHttpRequest();
-          const serverAddress = 'http://127.0.0.1:3000/signin';
+          const serverAddress = 'http://127.0.0.1:8080/signin';
 
           req.open('post',serverAddress,true);
           req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -67,9 +68,7 @@ export class LoginComponent implements OnInit {
                 {
                   localStorage.setItem("token",receivedItems.data_with_signKey);
                   this.loginMsg = receivedItems.msg;
-                      setTimeout(()=>{
-                        this.loginMsg = '';
-                      },3000);
+                  this.router.navigate(["/dashboard"]);
                 }
                 else if(receivedItems.success==false)
                 {
@@ -90,7 +89,7 @@ export class LoginComponent implements OnInit {
   {
     this.signupMsg = 'trying....';
       let req = new XMLHttpRequest();
-      const serverAddress = 'http://127.0.0.1:3000/signup';
+      const serverAddress = 'http://127.0.0.1:8080/signup';
       
       req.open('post',serverAddress,true);
 
