@@ -1,0 +1,52 @@
+<div class="main">
+<div class="flexbox" *ngIf="signinvisibleFlag">
+
+  <h3 class="flexitem flex-itemHeading">Sign-In</h3>
+        
+  <div class="form-group flexitem"> <label> User Name : </label>
+  <input #luname type="text" name="luname" class="form-control" (change)="getInputValue($event)"></div>
+
+  <div class="form-group flexitem"> <label> Pass-word : </label>
+  <input #lpwd type="password" name="lpwd" class="form-control" (change)="getInputValue($event)"></div>
+
+  <div class="flexitem loginmsg"> {{loginMsg}} </div>
+
+ <button class="btn btn-info flexitem flexitembtn" (click)="signIn()" type="button">Sign-IN</button>
+
+  <div class="flexitem link-access-div"> 
+    <ul>
+      <li class="leftLi">Forgot password !</li>
+      <li class="rightLi" (click)="showSignup()">Sign-up !</li>
+    </ul>
+  </div>  
+</div>
+
+
+<div class="flexbox" *ngIf="signupvisibleFlag">
+  
+    <h3 class="flexitem flex-itemHeading">Sign-up for login</h3>
+  
+    <div class="form-group flexitem"> <label> Name : </label>
+    <input #fname class="form-control txtBox" name="fname" (change)="getInputValue($event)"></div>
+
+    <div class="form-group flexitem"> <label> e-mail : </label>
+    <input #email type="email" class="form-control txtBox" name="email" (change)="getInputValue($event)"></div>
+  
+    <div class="form-group flexitem"> <label> User Name : </label>
+    <input #uname type="text" class="form-control txtBox" name="uname" (change)="getInputValue($event)"></div>
+  
+    <div class="form-group flexitem"> <label> Pass-word : </label>
+    <input #pwd type="password" class="form-control txtBox" name="pwd" (change)="getInputValue($event)"></div>
+
+    <div class="flexitem loginmsg">{{signupMsg}}</div>
+  
+    <button class="btn btn-info flexitem flexitembtn" (click)="signUp()" type="button" [disabled]="isFormNotProper">Sign-UP</button>
+  
+    <div class="flexitem link-access-div"> 
+      <ul>
+      <li class="leftLi" (click)="resetSignupForm()">Reset-Details </li>
+      <li class="rightLi" (click)="cancelSignup()">Cancel-Signup </li>
+      </ul>
+    </div>  
+  </div>
+  </div>

@@ -1,0 +1,70 @@
+.main{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 90vh;
+}
+label{
+    font-weight: bold;
+    font-family: verdana;
+}
+
+.flexbox{
+width: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+background-color: whitesmoke;
+border: 6px ridge darkcyan;
+border-radius: 15px;
+opacity: 0.88;
+}
+.flexitem{
+width: 90%;
+margin-bottom: 12px;
+}
+.loginmsg{
+text-align: center;
+margin-bottom: 2px;
+font-style: italic;
+font-size: 13.5px;
+color: red;
+height: 20px;
+}
+.flexitembtn{
+width: 30%;
+margin-bottom: 5px;
+}
+.flex-itemHeading{
+text-align: center;
+color: rgb(8, 102, 102);
+font-weight: bold;
+letter-spacing: 3px;
+margin-top: 15px;
+}
+.link-access-div{
+color: darkred;
+margin-right: auto;
+width: 100%;
+}
+
+ul li{
+display: inline;
+list-style-type: none;
+}
+
+li:hover{
+color: darkblue;
+cursor: pointer;
+}
+ul{
+padding: 0px;
+}
+.leftLi{
+float: left;
+margin-left: 9px;
+}
+.rightLi{
+float: right;
+margin-right: 9px;
+}
